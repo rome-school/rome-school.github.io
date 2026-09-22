@@ -1,0 +1,96 @@
+# Every edition of the RoME summer school, newest first.
+#
+# To add an edition: copy the block below, fill it in, put it at the top of this
+# file, and change the previous entry's `status` from `upcoming` to `past`.
+# Nothing else in the repository needs to change.
+#
+#   - number:    sequence number of the edition (1, 2, 3, ...)
+#     year:      four-digit year
+#     ordinal:   "First", "Second", ... — used in the edition heading
+#     dates:     human-readable date range, or "To be announced"
+#     city:      host city
+#     country:   host country
+#     host:      host institution, written out in full
+#     host_url:  institution homepage
+#     url:       the edition's own website (omit if it has none yet)
+#     mirror:    Internet Archive snapshot of `url` (see README)
+#     status:    upcoming | past
+#     blurb:     one or two sentences describing the edition
+#     highlights: optional list of notable things about the edition
+
+- number: 5
+  year: 2027
+  ordinal: Fifth
+  dates: To be announced
+  city: L'Aquila
+  country: Italy
+  host: Gran Sasso Science Institute
+  host_url: https://www.gssi.it/
+  status: upcoming
+  blurb: >-
+    The fifth edition brings RoME to Europe for the first time, hosted by the
+    Gran Sasso Science Institute in L'Aquila. Dates, programme and registration
+    will be announced here.
+
+- number: 4
+  year: 2026
+  ordinal: Fourth
+  dates: 23–27 February 2026
+  city: Brasília
+  country: Brazil
+  host: University of Brasília
+  host_url: https://www.unb.br/
+  url: https://lesunb.github.io/RoME26/
+  status: past
+  blurb: >-
+    Five days of lectures, working sessions and discussions, supported by ACM
+    SIGSOFT.
+  highlights:
+    - The first RoME Robotic Competition, in which participants designed and
+      executed missions on TurtleBots.
+
+- number: 3
+  year: 2025
+  ordinal: Third
+  dates: 11–14 March 2025
+  city: Fortaleza
+  country: Brazil
+  host: State University of Ceará
+  host_url: https://www.uece.br/
+  url: https://rome.gesaduece.com.br
+  status: past
+  blurb: >-
+    The first edition held outside Brasília, gathering participants from
+    different backgrounds to strengthen collaboration and advance research and
+    practical skills in robotic mission engineering.
+
+- number: 2
+  year: 2024
+  ordinal: Second
+  dates: 20–23 February 2024
+  city: Brasília
+  country: Brazil
+  host: University of Brasília
+  host_url: https://www.unb.br/
+  url: https://lesunb.github.io/RoME/
+  status: past
+  blurb: >-
+    A four-day event of presentations, working sessions and discussions, funded
+    by ACM SIGSOFT, held at the Department of Computer Science of the Institute
+    of Exact Sciences.
+
+- number: 1
+  year: 2023
+  ordinal: First
+  dates: To be confirmed
+  city: Brasília
+  country: Brazil
+  host: University of Brasília
+  host_url: https://www.unb.br/
+  url: https://lesunb.github.io/RoME/Previous/
+  status: past
+  blurb: >-
+    The edition that started the series, at the University of Brasília.
+  note: >-
+    The first edition has no standalone website; the link above points to the
+    photo archive kept on the 2024 site.

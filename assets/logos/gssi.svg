@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="180" viewBox="0 0 720 180" role="img" aria-labelledby="title desc">
+  <title id="title">Gran Sasso Science Institute</title>
+  <desc id="desc">Wordmark for Gran Sasso Science Institute.</desc>
+  <rect width="720" height="180" fill="#f7f9fb"/>
+  <rect x="24" y="24" width="132" height="132" rx="16" fill="#8c1d40"/>
+  <text x="90" y="104" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700" text-anchor="middle">GSSI</text>
+  <text x="184" y="84" fill="#2a2f36" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">Gran Sasso</text>
+  <text x="184" y="124" fill="#8c1d40" font-family="Arial, Helvetica, sans-serif" font-size="28">Science Institute</text>
+</svg>
