@@ -14,21 +14,25 @@
   short: UnB
   role: Host of RoME 2023, 2024 and 2026
   url: https://www.unb.br/
+  logo: /assets/logos/unb.svg
 
 - name: State University of Ceará
   short: UECE
   role: Host of RoME 2025
   url: https://www.uece.br/
+  logo: /assets/logos/uece.png
 
 - name: Laboratory for Experimental Software, UnB
   short: LES
   role: Organising laboratory
   url: https://les.unb.br/
+  logo: /assets/logos/les.png
 
 - name: ACM SIGSOFT
   short: ACM
   role: Supporter
   url: https://www2.sigsoft.org/
+  logo: /assets/logos/sigsoft.png
 
 - name: Research Support Foundation of the Federal District
   short: FAP-DF
@@ -39,3 +43,4 @@
   short: Softex
   role: Supporter
   url: https://softex.br/
+  logo: /assets/logos/softex.png
