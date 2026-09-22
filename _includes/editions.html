@@ -1,0 +1,55 @@
+{%- comment -%}
+  Renders _data/editions.yml as a vertical timeline. Editions are listed in the
+  order they appear in the data file, which is newest first.
+{%- endcomment -%}
+<ol class="editions">
+  {%- for edition in site.data.editions -%}
+  <li class="edition{% if edition.status == 'upcoming' %} edition--upcoming{% endif %}">
+    <div class="edition__head">
+      <span class="edition__year">{{ edition.year }}</span>
+      <span class="edition__ordinal">{{ edition.ordinal }} edition</span>
+      {%- if edition.status == 'upcoming' -%}
+      <span class="edition__tag">Upcoming</span>
+      {%- endif -%}
+    </div>
+
+    <p class="edition__where">
+      {%- if edition.host_url -%}
+      <a href="{{ edition.host_url }}">{{ edition.host }}</a>
+      {%- else -%}
+      {{ edition.host }}
+      {%- endif -%}
+      — {{ edition.city }}, {{ edition.country }}
+      <br>
+      <span class="edition__when">{{ edition.dates }}</span>
+    </p>
+
+    {%- if edition.blurb -%}
+    <p class="edition__blurb">{{ edition.blurb }}</p>
+    {%- endif -%}
+
+    {%- if edition.highlights -%}
+    <ul class="edition__highlights">
+      {%- for item in edition.highlights -%}
+      <li>{{ item }}</li>
+      {%- endfor -%}
+    </ul>
+    {%- endif -%}
+
+    {%- if edition.url or edition.mirror -%}
+    <p class="edition__links">
+      {%- if edition.url -%}
+      <a href="{{ edition.url }}">Visit the RoME {{ edition.year }} site</a>
+      {%- endif -%}
+      {%- if edition.mirror -%}
+      <a href="{{ edition.mirror }}">Archived copy</a>
+      {%- endif -%}
+    </p>
+    {%- endif -%}
+
+    {%- if edition.note -%}
+    <p class="edition__note">{{ edition.note }}</p>
+    {%- endif -%}
+  </li>
+  {%- endfor -%}
+</ol>

@@ -1,0 +1,17 @@
+{%- comment -%}
+  Renders _data/steering.yml.
+{%- endcomment -%}
+<ul class="people">
+  {%- for person in site.data.steering -%}
+  <li class="person">
+    <span class="person__name">
+      {%- if person.url -%}
+      <a href="{{ person.url }}">{{ person.name }}</a>
+      {%- else -%}
+      {{ person.name }}
+      {%- endif -%}
+    </span>
+    <span class="person__affiliation">{{ person.affiliation }}</span>
+  </li>
+  {%- endfor -%}
+</ul>
