@@ -3,7 +3,9 @@
 Implementation plan for the series-level website that collects every edition of the
 International Summer School on Robotic Mission Engineering.
 
-Status: proposal, not yet implemented. Written September 2026.
+Status: phases 2 to 5 are implemented in this repository. Phase 0 (governance)
+and the remaining archiving work in phase 1 need the steering committee. Written
+September 2026.
 
 ---
 
@@ -27,7 +29,7 @@ organising teams without rot.
 
 | Edition | Year | Dates | Host | Site |
 |---|---|---|---|---|
-| 1st | 2023 | — | University of Brasília, Brazil | https://lesunb.github.io/RoME/Previous/ |
+| 1st | 2023 | Mar 1–3 | University of Brasília, Brazil | site gone; [archived copy](https://web.archive.org/web/20230515192516/https://lesunb.github.io/RoME/) |
 | 2nd | 2024 | Feb 20–23 | University of Brasília, Brazil | https://lesunb.github.io/RoME/ |
 | 3rd | 2025 | Mar 11–14 | Fortaleza / UECE, Brazil | https://rome.gesaduece.com.br |
 | 4th | 2026 | Feb 23–27 | University of Brasília, Brazil | https://lesunb.github.io/RoME26/ |
@@ -39,8 +41,11 @@ Two things to settle before launch:
   already ran in Brasília in February 2026 and RoME 2027 at GSSI is listed as
   "coming". This plan assumes **RoME 2027, 5th edition, GSSI**. Correct it if wrong —
   it changes the edition numbering everywhere.
-- **2023 has no standalone site**, only a subpage of the 2024 site. Either accept the
-  deep link or rebuild a minimal 2023 page from it.
+- ~~**2023 has no standalone site**~~ — resolved. The original 2023 site was replaced
+  when later editions took over `lesunb.github.io/RoME/`, but an Internet Archive
+  snapshot from May 2023 preserves it, including the dates (1–3 March 2023) and the
+  funding and organising details. The site links to that snapshot plus the photo
+  archive kept on the 2024 site.
 
 ### Preservation risk (act on this early)
 
@@ -314,28 +319,31 @@ Create the `rome-school` GitHub organisation with the steering committee as owne
 Create `rome-school.github.io`. Enable Pages on `main`. Confirm the 2027-vs-2026
 numbering question. Agree the palette direction (terracotta or all-blue).
 
-**Phase 1 — Preservation (do early, independent of the site).**
-Archive all four edition sites to the Wayback Machine. Transcribe the 2025 edition's
-facts from the live SPA before they become unrecoverable. Collect host and sponsor logos
-as SVG where possible.
+**Phase 1 — Preservation (do early, independent of the site).** *Partly done.*
+Existing snapshots were found and recorded for 2023 and 2025. The 2024 and 2026 sites
+still have **no snapshot**: anonymous Save Page Now submissions are rejected, so
+somebody with an archive.org account has to submit them by hand and add the resulting
+URLs as `mirror:` fields. Every edition's core facts are transcribed into
+`_data/editions.yml`, so the metadata survives even if a site does not. Host and sponsor
+logos are still needed as SVG — only GSSI is in place, the rest fall back to initials.
 
-**Phase 2 — Skeleton.**
+**Phase 2 — Skeleton.** *Done.*
 `_config.yml`, `Gemfile`, layout, includes, Sass tokens, nav, footer. Local
 `bundle exec jekyll serve` working. Deploy an empty-but-styled site to confirm Pages
 builds and the domain resolves.
 
-**Phase 3 — Content.**
+**Phase 3 — Content.** *Done.*
 Populate `_data/editions.yml` with all five editions and `_data/steering.yml` with the
 nine committee members. Write the About copy. Build the timeline, host grid and
 committee cards.
 
-**Phase 4 — Polish and verification.**
+**Phase 4 — Polish and verification.** *Done.*
 Dark mode, reduced motion, responsive pass at 320 / 768 / 1280 px. Lighthouse run
 (target: 100 accessibility, 100 best practices). Check every outbound edition link
 resolves. Add Open Graph and Twitter card metadata with a rendered preview image, since
 these links get shared on social media and mailing lists.
 
-**Phase 5 — Handover.**
+**Phase 5 — Handover.** *Done.*
 `README.md` with two sections: "How to add an edition" (edit one YAML file, six lines,
 shown as a worked example) and "How to run locally". This is what keeps the site alive
 after the current chairs rotate off.
@@ -353,10 +361,11 @@ its entry to `_data/editions.yml` with `status: upcoming`.
 2. **Terracotta or all-blue.**
 3. **Is there a RoME logo asset** (the robot graphic used on the 2026 site) available as
    SVG, and who owns it? The umbrella site should use the series mark, not invent one.
-4. **Does the series want `rome-school.github.io` or a custom domain** such as
+4. **Who has an archive.org account** to submit the two missing snapshots?
+5. **Does the series want `rome-school.github.io` or a custom domain** such as
    `rome-school.org`? The GitHub domain is free and permanent; a custom domain looks
    better on a poster but reintroduces the renewal risk that threatens the 2025 site.
    Recommendation: launch on `rome-school.github.io`, add a custom domain later only if
    the organisation can pay for a 10-year registration up front.
-5. **Do past organising teams agree to their editions being listed and archived?**
+6. **Do past organising teams agree to their editions being listed and archived?**
    (Expected yes, but worth one email.)
