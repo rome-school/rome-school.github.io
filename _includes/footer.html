@@ -1,0 +1,15 @@
+<footer class="footer">
+  <div class="footer__inner">
+    <p class="footer__series">
+      <strong>{{ site.series_short }}</strong> — {{ site.series_full }}
+    </p>
+    <p class="footer__contact">
+      Questions about the series? Write to
+      <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a>.
+    </p>
+    <p class="footer__meta">
+      &copy; {{ site.time | date: "%Y" }} {{ site.copyright }} ·
+      <a href="{{ site.repository_url }}">Source on GitHub</a>
+    </p>
+  </div>
+</footer>
