@@ -83,7 +83,8 @@ When an edition finishes:
    `_data/editions.yml`. It renders as an "Archived copy" link beside the live
    one.
 
-Editions still missing a usable snapshot are noted in [`PLAN.md`](PLAN.md).
+The 2024 and 2026 edition sites currently have no snapshot at all, so they
+are the ones to do first.
 
 ## How the site is built
 
