@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--
+  Source for assets/img/social-card.png, the 1200x630 preview image shown when a
+  link to the site is shared. Regenerate it after editing this file:
+
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
+      --headless=new --disable-gpu --hide-scrollbars \
+      --allow-file-access-from-files --window-size=1200,630 \
+      --screenshot=assets/img/social-card.png tools/social-card.html
+
+  Colours here are copies of the tokens in _sass/_rome.scss; keep them in step.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face {
+    font-family: 'Space Grotesk';
+    font-weight: 500 700;
+    src: url(../assets/fonts/space-grotesk-latin.woff2) format('woff2');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-weight: 400 600;
+    src: url(../assets/fonts/inter-latin.woff2) format('woff2');
+  }
+
+  * { box-sizing: border-box; margin: 0; }
+
+  body {
+    width: 1200px;
+    height: 630px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 22px;
+    padding: 72px 80px;
+    background:
+      radial-gradient(ellipse 60% 90% at 88% 8%, #17355c 0%, transparent 62%),
+      linear-gradient(160deg, #0b2545 0%, #081b33 100%);
+    color: #f4f1ec;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .rule {
+    width: 84px;
+    height: 6px;
+    border-radius: 3px;
+    background: #b5563c;
+  }
+
+  .eyebrow {
+    color: #e0a08c;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    max-width: 17ch;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 82px;
+    font-weight: 700;
+    line-height: 1.04;
+    letter-spacing: -0.03em;
+  }
+
+  .sub {
+    max-width: 44ch;
+    color: rgba(244, 241, 236, 0.76);
+    font-size: 26px;
+    line-height: 1.45;
+  }
+
+  .foot {
+    margin-top: 10px;
+    color: rgba(244, 241, 236, 0.6);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.04em;
+  }
+</style>
+</head>
+<body>
+  <div class="rule"></div>
+  <p class="eyebrow">RoME Summer School</p>
+  <h1>Engineering the missions that robots carry out</h1>
+  <p class="sub">
+    The International Summer School on Robotic Mission Engineering — every
+    edition of the series, in one place.
+  </p>
+  <p class="foot">rome-school.github.io</p>
+</body>
+</html>
