@@ -14,6 +14,7 @@
   --terracotta: #9e4631;        //  6.2:1 — links, buttons, markers
   --terracotta-bright: #b5563c; //  4.8:1 — hover and decorative fills only
   --terracotta-wash: #f6ece7;
+  --on-terracotta: #ffffff;    //  6.2:1 on --terracotta
 
   // Surfaces
   --sand: #faf7f2;
@@ -43,6 +44,47 @@
   --shadow-lg: 0 14px 34px rgba(11, 37, 69, 0.12);
 
   --transition: 140ms ease;
+}
+
+// -----------------------------------------------------------------------------
+// Dark theme
+//
+// Only the tokens change; no component rule below is theme-aware. Terracotta is
+// lifted to a brighter tone because #9e4631 does not carry enough contrast on a
+// dark ground (--terracotta here measures 7.1:1 against --sand).
+// -----------------------------------------------------------------------------
+
+@mixin rome-dark {
+  --ink: #16212e;
+  --ink-soft: #22303f;
+  --terracotta: #d98266;
+  --terracotta-bright: #e89b82;
+  --terracotta-wash: #2b1f1a;
+  --on-terracotta: #2b1208;    //  6.2:1 on the lightened --terracotta
+
+  --sand: #0e1621;
+  --surface: #16212e;
+  --surface-muted: #131d29;
+  --border: #27333f;
+  --border-strong: #3a4653;
+
+  --text: #e6e9ee;
+  --text-muted: #a3adba;
+  --text-on-ink: #f4f1ec;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 14px 34px rgba(0, 0, 0, 0.45);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    @include rome-dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  @include rome-dark;
 }
 
 // =============================================================================
@@ -171,6 +213,7 @@ ul { padding-left: 1.15rem; }
 
 .nav {
   background: var(--ink);
+  border-bottom: 1px solid var(--border);
   box-shadow: var(--shadow-sm);
 }
 
@@ -339,7 +382,7 @@ ul { padding-left: 1.15rem; }
   display: inline-block;
   padding: 0.7rem 1.4rem;
   background: var(--terracotta);
-  color: #fff;
+  color: var(--on-terracotta);
   border-radius: var(--radius-pill);
   font-weight: 600;
   text-decoration: none;
@@ -349,7 +392,7 @@ ul { padding-left: 1.15rem; }
 
 .btn:hover {
   background: var(--terracotta-bright);
-  color: #fff;
+  color: var(--on-terracotta);
   transform: translateY(-1px);
 }
 
@@ -426,7 +469,7 @@ ul { padding-left: 1.15rem; }
 .edition__tag {
   padding: 0.1rem 0.6rem;
   background: var(--terracotta);
-  color: #fff;
+  color: var(--on-terracotta);
   border-radius: var(--radius-pill);
   font-size: 0.7rem;
   font-weight: 700;
@@ -506,13 +549,15 @@ ul { padding-left: 1.15rem; }
   color: inherit;
 }
 
+// Institution logos are supplied as artwork for light backgrounds, so this
+// plate keeps a light fill in both themes.
 .logo-card__image {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 68px;
   padding: 0.5rem;
-  background: var(--surface-muted);
+  background: #f3efe8;
   border-radius: var(--radius-sm);
 }
 
@@ -526,7 +571,7 @@ ul { padding-left: 1.15rem; }
   font-family: var(--font-display);
   font-size: 1.3rem;
   font-weight: 700;
-  color: var(--ink);
+  color: #0b2545;
   letter-spacing: 0.04em;
 }
 
@@ -614,6 +659,7 @@ ul { padding-left: 1.15rem; }
 .footer {
   padding: 2.5rem 0;
   background: var(--ink);
+  border-top: 1px solid var(--border);
   color: var(--text-on-ink);
 }
 
