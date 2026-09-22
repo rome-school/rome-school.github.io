@@ -7,3 +7,6 @@ Gemfile.lock
 
 # Internal planning notes, kept local
 PLAN.md
+
+# Internal working documents, kept local
+*.pdf

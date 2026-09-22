@@ -46,11 +46,14 @@ The other two data files work the same way:
 |---|---|
 | [`_data/editions.yml`](_data/editions.yml) | Every edition, newest first |
 | [`_data/steering.yml`](_data/steering.yml) | Steering committee members |
-| [`_data/institutions.yml`](_data/institutions.yml) | Host institutions and supporters |
+| [`_data/institutions.yml`](_data/institutions.yml) | Institutions that have hosted an edition |
 
-An institution with no `logo` file falls back to the initials in its `short`
-field, so a new host can be listed straight away and its logo added later. Put
-logos in `assets/logos/`, as SVG where possible.
+An institution with no `logo` shows its name only, so a new host can be listed
+straight away and its logo added later. Put logos in `assets/logos/`, as SVG
+where possible.
+
+Funders and sponsors are deliberately not listed on this site. They supported
+individual editions, and are credited on those editions' own websites.
 
 ## Running the site locally
 
@@ -102,19 +105,15 @@ _layouts/default.html Page shell
 _includes/            head, nav, footer, and one include per section
 _sass/_rome.scss      All styling, with the design tokens at the top
 assets/               Fonts, logos, images, and the nav script
-tools/social-card.html Source for the link-preview image
 ```
 
 ### Styling
 
-Every colour, size and radius is a CSS custom property declared once at the top
-of [`_sass/_rome.scss`](_sass/_rome.scss). To restyle the site, edit that block
-and nothing else. The dark theme redefines the same tokens and no component rule
-is theme-aware.
-
-Contrast ratios are recorded next to the colour tokens; all of them meet WCAG
-2.1 AA at normal text size. If you change a colour, check its replacement before
-committing.
+The colours and fonts are declared once at the top of
+[`_sass/_rome.scss`](_sass/_rome.scss). To restyle the site, edit that block and
+nothing else. Navy `#00326d` carries the navigation, footer and headings; blue
+`#0068b4` carries links. Both clear WCAG 2.1 AA against white at normal text
+size, so check any replacement before committing.
 
 The stylesheet uses Sass `@import` rather than `@use`. Dart Sass warns that
 `@import` is deprecated, but the GitHub Pages toolchain does not support `@use`,
@@ -122,15 +121,9 @@ so `@import` is what works in both places.
 
 ### Fonts
 
-Inter and Space Grotesk are self-hosted from `assets/fonts/`, so no request goes
-to a third party when a page loads. Both are licensed under the SIL Open Font
-License 1.1; see [`LICENSE-fonts.txt`](LICENSE-fonts.txt).
-
-### Link preview image
-
-`assets/img/social-card.png` is what appears when a link to the site is shared.
-Its source is [`tools/social-card.html`](tools/social-card.html); the command to
-regenerate it is in a comment at the top of that file.
+Roboto and Roboto Slab are self-hosted from `assets/fonts/`, so no request goes
+to a third party when a page loads. Both are licensed under the Apache License
+2.0; see [`LICENSE-fonts.txt`](LICENSE-fonts.txt).
 
 ## Contact
 

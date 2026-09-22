@@ -1,29 +1,12 @@
-# Steering committee of the RoME series, in alphabetical order by first name.
-# `url` is optional; when absent the name is rendered as plain text.
-
-- name: Ana Cavalcanti
-  affiliation: University of York, United Kingdom
+# Steering committee of the RoME series.
+# `photo` and `url` are optional.
 
 - name: Genaína Nunes Rodrigues
   affiliation: University of Brasília, Brazil
-
-- name: Lina Marsso
-  affiliation: Polytechnique Montréal, Canada
-
-- name: Marcel Vinicius Medeiros Oliveira
-  affiliation: Federal University of Rio Grande do Norte, Brazil
+  url: https://genaina.github.io/
+  photo: /assets/people/genaina.png
 
 - name: Patrizio Pelliccione
   affiliation: Gran Sasso Science Institute, Italy
-
-- name: Paulo Henrique Mendes Maia
-  affiliation: State University of Ceará, Brazil
-
-- name: Pedro Ribeiro
-  affiliation: University of York, United Kingdom
-
-- name: Ricardo Caldas
-  affiliation: Gran Sasso Science Institute, Italy
-
-- name: Thierry Lecomte
-  affiliation: ClearSy, France
+  url: https://www.patriziopelliccione.com/
+  photo: /assets/people/patrizio.jpg

@@ -1,46 +1,23 @@
-# Host institutions and recurring supporters of the series.
+# Institutions that have hosted an edition of the series.
 #
-# `logo` is optional. When it is absent the card falls back to the initials in
-# `short`, so an institution can be listed before its logo has been obtained.
-# Prefer SVG logos, placed in assets/logos/.
+# Funders and sponsors are deliberately not listed here: they supported
+# individual editions, and are credited on those editions' own websites.
+#
+# `logo` is optional. Without it the card shows the institution's name only, so
+# a new host can be listed before its logo has been obtained. Prefer SVG, placed
+# in assets/logos/.
 
 - name: Gran Sasso Science Institute
-  short: GSSI
   role: Host of RoME 2027
   url: https://www.gssi.it/
   logo: /assets/logos/gssi.svg
 
 - name: University of Brasília
-  short: UnB
   role: Host of RoME 2023, 2024 and 2026
   url: https://www.unb.br/
   logo: /assets/logos/unb.svg
 
 - name: State University of Ceará
-  short: UECE
   role: Host of RoME 2025
   url: https://www.uece.br/
   logo: /assets/logos/uece.png
-
-- name: Laboratory for Experimental Software, UnB
-  short: LES
-  role: Organising laboratory
-  url: https://les.unb.br/
-  logo: /assets/logos/les.png
-
-- name: ACM SIGSOFT
-  short: ACM
-  role: Supporter
-  url: https://www2.sigsoft.org/
-  logo: /assets/logos/sigsoft.png
-
-- name: Research Support Foundation of the Federal District
-  short: FAP-DF
-  role: Supporter
-  url: https://www.fap.df.gov.br/
-
-- name: Softex
-  short: Softex
-  role: Supporter
-  url: https://softex.br/
-  logo: /assets/logos/softex.png

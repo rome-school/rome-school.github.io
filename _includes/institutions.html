@@ -1,21 +1,17 @@
 {%- comment -%}
-  Renders _data/institutions.yml. Institutions without a logo file fall back to
-  their initials, so a new host can be listed before its logo is available.
+  Renders _data/institutions.yml. An institution without a `logo` shows its name
+  only, so a new host can be listed before its logo has been obtained.
 {%- endcomment -%}
-<ul class="logo-grid">
-  {%- for org in site.data.institutions -%}
+<ul class="institution-grid">
+  {%- for org in site.data.institutions %}
   <li>
-    <a class="logo-card" href="{{ org.url }}">
-      <span class="logo-card__image">
-        {%- if org.logo -%}
-        <img src="{{ org.logo | relative_url }}" alt="{{ org.name }}" loading="lazy">
-        {%- else -%}
-        <span class="logo-card__initials" aria-hidden="true">{{ org.short }}</span>
-        {%- endif -%}
-      </span>
-      <span class="logo-card__role">{{ org.role }}</span>
-      <span class="logo-card__name">{{ org.name }}</span>
+    <a class="institution-card" href="{{ org.url }}">
+      {%- if org.logo %}
+      <img class="institution-logo" src="{{ org.logo | relative_url }}" alt="{{ org.name }}" loading="lazy">
+      {%- endif %}
+      <span class="institution-role">{{ org.role }}</span>
+      <span class="institution-name">{{ org.name }}</span>
     </a>
   </li>
-  {%- endfor -%}
+  {%- endfor %}
 </ul>
