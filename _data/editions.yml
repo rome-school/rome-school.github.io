@@ -13,7 +13,9 @@
 #     host:      host institution, written out in full
 #     host_url:  institution homepage
 #     url:       the edition's own website (omit if it has none yet)
-#     mirror:    Internet Archive snapshot of `url` (see README)
+#     mirror:    Internet Archive snapshot, for editions whose site is gone or
+#                at risk (see README)
+#     photos:    optional link to a photo archive
 #     status:    upcoming | past
 #     blurb:     one or two sentences describing the edition
 #     highlights: optional list of notable things about the edition
@@ -58,6 +60,7 @@
   host: State University of Ceará
   host_url: https://www.uece.br/
   url: https://rome.gesaduece.com.br
+  mirror: https://web.archive.org/web/20250614012724/https://rome.gesaduece.com.br/
   status: past
   blurb: >-
     The first edition held outside Brasília, gathering participants from
@@ -82,15 +85,19 @@
 - number: 1
   year: 2023
   ordinal: First
-  dates: To be confirmed
+  dates: 1–3 March 2023
   city: Brasília
   country: Brazil
   host: University of Brasília
   host_url: https://www.unb.br/
-  url: https://lesunb.github.io/RoME/Previous/
+  mirror: https://web.archive.org/web/20230515192516/https://lesunb.github.io/RoME/
+  photos: https://lesunb.github.io/RoME/Previous/
   status: past
   blurb: >-
-    The edition that started the series, at the University of Brasília.
+    The edition that started the series, funded by FAP-DF through a project
+    coordinated by Genaína Nunes Rodrigues at the University of Brasília,
+    together with Patrizio Pelliccione (GSSI), Radu Calinescu (University of
+    York) and Carla Koike (UnB).
   note: >-
-    The first edition has no standalone website; the link above points to the
-    photo archive kept on the 2024 site.
+    The first edition's website was replaced when later editions took over the
+    same address, so only the archived copy remains.

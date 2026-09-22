@@ -35,13 +35,16 @@
     </ul>
     {%- endif -%}
 
-    {%- if edition.url or edition.mirror -%}
+    {%- if edition.url or edition.mirror or edition.photos -%}
     <p class="edition__links">
       {%- if edition.url -%}
       <a href="{{ edition.url }}">Visit the RoME {{ edition.year }} site</a>
       {%- endif -%}
       {%- if edition.mirror -%}
       <a href="{{ edition.mirror }}">Archived copy</a>
+      {%- endif -%}
+      {%- if edition.photos -%}
+      <a href="{{ edition.photos }}">Photo archive</a>
       {%- endif -%}
     </p>
     {%- endif -%}
