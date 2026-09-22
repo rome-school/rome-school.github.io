@@ -1,0 +1,32 @@
+# Site
+title: RoME Summer School
+tagline: International Summer School on Robotic Mission Engineering
+description: >-
+  RoME is an international summer school that advances the engineering of
+  robotic missions through systematic approaches drawn from Software
+  Engineering. This site collects every edition of the series.
+url: https://rome-school.github.io
+baseurl: ""
+lang: en
+
+# Series
+series_short: RoME
+series_full: International Summer School on Robotic Mission Engineering
+contact_email: romesummerschool@gmail.com
+repository_url: https://github.com/rome-school/rome-school.github.io
+copyright: Summer School Organizers
+
+# Build
+markdown: kramdown
+permalink: pretty
+
+sass:
+  style: compressed
+  sass_dir: _sass
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - PLAN.md
+  - README.md
+  - vendor
